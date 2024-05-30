@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Yeseva One", serif;
+}
+
+#header_container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: #e7e7e7;
+}
+
+#logo h3 {
+    color: rgb(27, 118, 255);
+}
+
+#nav_menu ul {
+    display: flex;
+    gap: 20px;
+    position: relative;
+}
+
+.nav_link {
+    position: relative;
+}
+
+#nav_menu ul li {
+    list-style: none;
+}
+
+#nav_menu ul li a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+#nav_menu ul li a:hover {
+    color: rgb(27, 118, 255);
+    transition: .2s;
+}
+
+
+.nav_link::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background: rgb(27, 118, 255);
+    transition: width .5s;
+}
+
+.nav_link:hover::after {
+    width: 60%;
+}
+
+.show_menu {
+    display: none;
+}
+
+
+@media only screen and (max-width:1000px) and (min-width:100px) {
+    .show_menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    #nav_menu {
+        display: none;
+    }
+}
+
+
+#mobile_header_container {
+    position: fixed;
+    top: 0;
+    right: -80%;
+    /* Start off-screen */
+    background: #0890cf31;
+    backdrop-filter: blur(3px);
+    width: 80%;
+    height: 100%;
+    display: flex;
+    padding: 20px;
+    transition: right 0.5s ease;
+    /* Transition effect */
+    display: none;
+}
+
+#mobile_nav_menu ul {
+    position: relative;
+    line-height: 60px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#mobile_nav_menu {
+    position: relative;
+    width: 100%;
+}
+
+#mobile_nav_menu ul li {
+    list-style: none;
+}
+
+#mobile_nav_menu ul li a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+#mobile_nav_menu ul li a:hover {
+    color: rgb(27, 118, 255);
+    transition: .2s;
+}
+
+
+.mobile_nav_menu::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background: rgb(27, 118, 255);
+    transition: width 2s;
+}
+
+.mobile_nav_menu:hover::after {
+    width: 60%;
+}
+
+.close_menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
