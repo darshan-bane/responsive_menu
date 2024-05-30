@@ -12,9 +12,10 @@
 </head>
 
 <body>
+    <!-- ======== Desktop Header ======== -->
     <div id="header_container">
         <div id="logo">
-            <h3>Darshan</h3>
+            <h3><a href="#">Darshan</a></h3>
         </div>
         <nav id="nav_menu">
             <ul>
@@ -28,6 +29,8 @@
             <i class="fa-solid fa-bars" id="show_menu" onclick="dikhao()"></i>
         </div>
     </div>
+
+    <!-- ============ Side Bar ============= -->
     <div id="mobile_header_container">
         <nav id="mobile_nav_menu">
             <ul>
@@ -41,6 +44,25 @@
             </div>
         </nav>
     </div>
+
+
+
+    <!-- ========= FORM =========== -->
+    <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="533a16ab-cf14-4014-bc45-db9cc3455cb6">
+
+        <input type="text" name="name" id="name" placeholder="Enter Full Name" class="input_field" required>
+        <input type="email" name="email" id="email" placeholder="Enter Email id" class="input_field" required>
+        <input type="tel" name="phone" id="phone" placeholder="Enter Phone" class="input_field" required>
+        <textarea name="message" id="message" cols="30" rows="5" placeholder="Enter Message"></textarea>
+        <button type="submit">Submit</button>
+    </form>
+
+
+
+
+
+
 
 
     <script>
@@ -61,10 +83,6 @@
                 mobileMenu.style.display = "none"; // Hide after transition
             }, 500); // Match the transition duration
         }
-
-
-
-
     </script>
 </body>
 

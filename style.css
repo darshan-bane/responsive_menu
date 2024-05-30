@@ -13,8 +13,9 @@
     background: #e7e7e7;
 }
 
-#logo h3 {
+#logo h3 a {
     color: rgb(27, 118, 255);
+    text-decoration: none;
 }
 
 #nav_menu ul {
@@ -25,6 +26,7 @@
 
 .nav_link {
     position: relative;
+    /* -----------Imp for underline on hover----------- */
 }
 
 #nav_menu ul li {
@@ -139,4 +141,27 @@
     top: 0;
     right: 0;
     cursor: pointer;
+}
+
+
+/* ================== Form ============== */
+form {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input,
+textarea,
+button {
+    padding: 10px;
+}
+
+form button {
+    cursor: pointer;
+    background: rgb(27, 118, 255);
+    border: none;
+    border-radius: 7px;
+    color: aliceblue;
 }
