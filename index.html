@@ -136,20 +136,20 @@
     <script>
         const productImg = document.getElementById('product_img');
         const btns = document.querySelectorAll('.btn');
-    
+
         btns.forEach((btn, index) => {
             btn.addEventListener('click', (event) => {
                 productImg.src = `img${index + 1}.webp`;
-    
+
                 btns.forEach((btn) => {
                     btn.classList.remove("active");
                 });
-    
+
                 event.target.classList.add("active");
             });
         });
     </script>
-    
+
 
 
 
