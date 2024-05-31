@@ -58,9 +58,98 @@
         <button type="submit">Submit</button>
     </form>
 
+    <!-- ========= Radio =========== -->
+    <form action="">
+        <div class="size_select">
+            <label for="small">
+                <input type="radio" name="size" id="small">
+                <div>
+                    <p>Darshan</p>
+                    <p>Rs. 999/-</p>
+                </div>
+            </label>
+            <label for="medium">
+                <input type="radio" name="size" id="medium">
+                <div>
+                    <p>Darshan</p>
+                    <p>Rs. 999/-</p>
+                </div>
+            </label>
+            <label for="large">
+                <input type="radio" name="size" id="large"><span>L</span>
+            </label>
+        </div>
 
 
+        <div class="color_select">
+            <label for="red">
+                <input type="radio" name="color" id="red"> <span class="color1"></span>
+            </label>
+            <label for="blue">
+                <input type="radio" name="color" id="blue"> <span class="color2"></span>
+            </label>
+            <label for="green">
+                <input type="radio" name="color" id="green"> <span class="color3"></span>
+            </label>
+        </div>
+    </form>
 
+    <div class="gallery">
+        <img src="img1.webp" class="images" id="product_img" alt="">
+        <div class="controls">
+            <span class="btn active"></span>
+            <span class="btn"></span>
+            <span class="btn"></span>
+        </div>
+    </div>
+
+    <!-- <script>
+        const productImg = document.getElementById('product_img');
+        const btn = document.getElementsByClassName('btn');
+
+        btn[0].addEventListener('click', () => {
+            productImg.src = "img1.webp";
+
+            for(bt of btn){
+                bt.classList.remove("active")
+            }
+            this.classList.add("active")
+        })
+        btn[1].addEventListener('click', () => {
+            productImg.src = "img2.webp";
+
+            for(bt of btn){
+                bt.classList.remove("active")
+            }
+            this.classList.add("active")
+        })
+        btn[2].addEventListener('click', () => {
+            productImg.src = "img3.webp";
+
+            for(bt of btn){
+                bt.classList.remove("active")
+            }
+            this.classList.add("active")
+        })
+    </script> -->
+    <!-- OR -->
+    <script>
+        const productImg = document.getElementById('product_img');
+        const btns = document.querySelectorAll('.btn');
+    
+        btns.forEach((btn, index) => {
+            btn.addEventListener('click', (event) => {
+                productImg.src = `img${index + 1}.webp`;
+    
+                btns.forEach((btn) => {
+                    btn.classList.remove("active");
+                });
+    
+                event.target.classList.add("active");
+            });
+        });
+    </script>
+    
 
 
 
